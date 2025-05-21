@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Évaluation des Modèles</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Prévision de la Demande Énergétique</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="data.html">Données</a></li>
+                <li><a href="preprocessing.html">Prétraitement</a></li>
+                <li><a href="modeling.html">Modélisation</a></li>
+                <li><a href="evaluation.html" class="active">Évaluation</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>📊 Évaluation des Modèles</h2>
+            <p>Nous avons évalué les performances de chaque modèle à l’aide de la métrique <strong>RMSE</strong> (Root Mean Squared Error), qui mesure l’écart moyen entre les valeurs prédites et les valeurs réelles.</p>
+        </section>
+
+        <section>
+            <h3>⚙️ Méthodologie</h3>
+            <ul>
+                <li>Division des données en jeux d'entraînement et de test.</li>
+                <li>Utilisation de <strong>cross-validation</strong> lorsque possible.</li>
+                <li>Évaluation à la fois sur la granularité <strong>horaire</strong> (24 heures) et <strong>journalière</strong> (7 jours).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>📁 Sauvegarde des Résultats</h3>
+            <ul>
+                <li>Les scores RMSE de chaque modèle sont enregistrés dans un fichier de résultats.</li>
+                <li>Un tableau résumant les meilleurs modèles est sauvegardé dans <code>data/submission/best_models.csv</code>.</li>
+                <li>Les features sélectionnées sont également enregistrées pour traçabilité dans <code>features_selected_daily.csv</code> et <code>features_selected_hourly.csv</code>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>🏆 Sélection Finale</h3>
+            <p>Le modèle avec le meilleur RMSE par zone et horizon est retenu pour une éventuelle mise en production dans le dashboard Streamlit. Il servira aussi de base pour la comparaison avec les modèles de deep learning.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Projet IA/Data - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

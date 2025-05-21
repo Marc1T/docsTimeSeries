@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Modélisation</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Prévision de la Demande Énergétique</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="data.html">Données</a></li>
+                <li><a href="preprocessing.html">Prétraitement</a></li>
+                <li><a href="modeling.html" class="active">Modélisation</a></li>
+                <li><a href="evaluation.html">Évaluation</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>🤖 Approche de Modélisation</h2>
+            <p>Nous avons adopté une approche hybride en combinant des modèles statistiques, de machine learning et de deep learning pour maximiser la précision de la prévision de la demande électrique à l’échelle horaire et journalière.</p>
+        </section>
+
+        <section>
+            <h3>📈 Modèles Classiques</h3>
+            <ul>
+                <li><strong>ElasticNet :</strong> utile pour la régularisation et la sélection automatique de variables.</li>
+                <li><strong>Ridge Regression :</strong> modèle linéaire robuste.</li>
+                <li><strong>Random Forest :</strong> modèle d’ensemble puissant pour gérer les non-linéarités.</li>
+                <li><strong>LightGBM :</strong> gradient boosting efficace pour les grandes données tabulaires.</li>
+                <li><strong>ARIMA (pmdarima) :</strong> modèle statistique pour séries temporelles, avec gestion de la saisonnalité (m=24 ou m=7).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>🧠 Modèles Deep Learning</h3>
+            <ul>
+                <li><strong>LSTM :</strong> spécialisé dans la capture des dépendances longues dans les séries temporelles.</li>
+                <li><strong>GRU :</strong> alternative légère au LSTM.</li>
+                <li><strong>1D CNN :</strong> efficace pour l’extraction de patterns locaux temporels.</li>
+                <li><strong>CNN-LSTM :</strong> combinaison de CNN et LSTM pour exploiter à la fois les patterns locaux et globaux.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>⚙️ Sélection des Meilleurs Modèles</h3>
+            <ul>
+                <li>Pour chaque zone et horizon (horaire/journalier), nous avons comparé les RMSE et sauvegardé le meilleur modèle.</li>
+                <li>Les résultats sont enregistrés dans <code>data/submission/best_models.csv</code>.</li>
+                <li>Les meilleurs modèles seront utilisés dans le dashboard pour la prédiction.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Projet IA/Data - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

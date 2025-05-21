@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prétraitement des Données</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Prévision de la Demande Énergétique</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="data.html">Données</a></li>
+                <li><a href="preprocessing.html" class="active">Prétraitement</a></li>
+                <li><a href="modeling.html">Modélisation</a></li>
+                <li><a href="evaluation.html">Évaluation</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>🔧 Étapes de Prétraitement</h2>
+            <p>Le prétraitement des données est une étape clé du projet. Elle permet de transformer les données brutes en un format exploitable pour l'entraînement des modèles de prévision.</p>
+        </section>
+
+        <section>
+            <h3>📅 1. Manipulation temporelle</h3>
+            <ul>
+                <li>Conversion des timestamps</li>
+                <li>Rééchantillonnage horaire / journalier</li>
+                <li>Création de variables calendaires : jour de la semaine, mois, vacances, etc.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>🧹 2. Nettoyage des données</h3>
+            <ul>
+                <li>Suppression des doublons</li>
+                <li>Imputation des valeurs manquantes (interpolation, médiane...)</li>
+                <li>Filtrage de plages incohérentes</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>⚙️ 3. Feature Engineering</h3>
+            <ul>
+                <li>Ajout de variables exogènes : PVPC, météo, production solaire/éolienne</li>
+                <li>Détection automatique des variables pertinentes (ElasticNet, importance RF...)</li>
+                <li>Encodage et normalisation (MinMax, StandardScaler...)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>📁 4. Sauvegarde des fichiers</h3>
+            <ul>
+                <li>Données nettoyées → <code>data/processed/</code></li>
+                <li>Features sélectionnées → <code>data/submission/features_selected_daily.csv</code> et <code>features_selected_hourly.csv</code></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Projet IA/Data - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

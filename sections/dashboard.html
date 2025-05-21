@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Prévision de la Demande Énergétique</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="data.html">Données</a></li>
+                <li><a href="preprocessing.html">Prétraitement</a></li>
+                <li><a href="modeling.html">Modélisation</a></li>
+                <li><a href="evaluation.html">Évaluation</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>📈 Dashboard Interactif</h2>
+            <p>Une interface web a été développée avec <strong>Streamlit</strong> pour permettre aux utilisateurs de :</p>
+            <ul>
+                <li>Choisir une <strong>zone géographique</strong> depuis une liste déroulante (par défaut : "nationale")</li>
+                <li>Visualiser les <strong>prévisions horaires</strong> (24 heures) et <strong>journalières</strong> (7 jours)</li>
+                <li>Changer de zone à tout moment et voir les modèles utilisés</li>
+                <li>Afficher une carte simplifiée des grandes zones principales</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>🚀 Lancer le Dashboard</h3>
+            <p>Pour lancer le dashboard en local :</p>
+            <pre><code>streamlit run dashboard/app.py</code></pre>
+            <p>Il s’ouvrira automatiquement sur <a href="http://localhost:8501" target="_blank">http://localhost:8501</a></p>
+        </section>
+
+        <section>
+            <h3>🧠 Modèles chargés</h3>
+            <ul>
+                <li>Les meilleurs modèles par zone sont automatiquement détectés à partir de <code>best_models.csv</code></li>
+                <li>Les modèles peuvent être de type <em>RandomForest, Ridge, ElasticNet, etc.</em></li>
+                <li>Les modèles Deep Learning sont également pris en charge</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>📂 Organisation des fichiers</h3>
+            <ul>
+                <li><code>dashboard/app.py</code> : code principal de l'application</li>
+                <li><code>data/submission/</code> : contient les fichiers <em>best_models.csv</em>, <em>features_selected_*.csv</em> et les prévisions</li>
+                <li><code>models/</code> : modèles ML/DL entraînés</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Projet IA/Data - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

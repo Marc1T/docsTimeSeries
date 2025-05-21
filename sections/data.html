@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Données utilisées</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Prévision de la Demande Énergétique</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="data.html" class="active">Données</a></li>
+                <li><a href="preprocessing.html">Prétraitement</a></li>
+                <li><a href="modeling.html">Modélisation</a></li>
+                <li><a href="evaluation.html">Évaluation</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>📊 Description des Données</h2>
+            <p>Notre projet s’appuie sur des données publiques issues du réseau électrique espagnol (REE) et du marché de l’électricité (PVPC). Ces données couvrent la période 2015 à 2025 et incluent des indicateurs à l’échelle nationale et régionale.</p>
+        </section>
+
+        <section>
+            <h3>📁 Sources</h3>
+            <ul>
+                <li><strong>ESIOS API</strong> : pour les données de consommation et de génération électrique par zone.</li>
+                <li><strong>PVPC (Precio Voluntario al Pequeño Consumidor)</strong> : pour les prix horaires de l’électricité (disponibles par région depuis 2021).</li>
+                <li><strong>REE Data Portal</strong> : pour certaines données historiques agrégées.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>🗂️ Types de Données</h3>
+            <ul>
+                <li><strong>Demanda (MW)</strong> : Demande réelle d’électricité (horaire/journalière).</li>
+                <li><strong>Generación Programada</strong> : Puissance prévue par type de source.</li>
+                <li><strong>PVPC</strong> : Prix de l’électricité en €/kWh, horaires par zone depuis 2021.</li>
+                <li><strong>Température & météo</strong> : Intégrées dans les versions avancées (si disponibles).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>🧾 Format & Répartition</h3>
+            <ul>
+                <li><strong>Fréquence :</strong> Horaire et journalière</li>
+                <li><strong>Période :</strong> 2015 - 2025</li>
+                <li><strong>Zones géographiques :</strong> Espagne nationale + 11 zones régionales</li>
+                <li><strong>Fichiers :</strong> stockés dans <code>data/processed/</code> au format CSV</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>📌 Exemple de variables</h3>
+            <pre>
+timestamp, demanda, generacion_eolica, generacion_solar, precio_pvpc
+2024-05-01 00:00, 28100, 5600, 2400, 0.147
+2024-05-01 01:00, 26500, 5400, 2300, 0.143
+...
+            </pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Projet IA/Data - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
