@@ -107,3 +107,60 @@ footer {
         padding: 20px;
     }
 }
+
+/* Section Redirect */
+.redirect {
+    background-color: #f0f6fa;
+    border: 1.5px solid #b3d8f2;
+    border-radius: 8px;
+    padding: 28px 24px 24px 24px;
+    margin: 32px 0;
+    box-shadow: 0 2px 8px rgba(0, 51, 102, 0.05);
+    text-align: center;
+}
+
+.redirect h2 {
+    color: #005bb5;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.4em;
+}
+
+.redirect p {
+    color: #003366;
+    font-size: 1.08em;
+    margin-bottom: 20px;
+}
+
+.redirect-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.redirect .btn {
+    background-color: #005bb5;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.redirect .btn:hover {
+    background-color: #003366;
+}
+
+@media (max-width: 600px) {
+    .redirect-buttons {
+        flex-direction: column;
+        gap: 12px 0;
+    }
+}
